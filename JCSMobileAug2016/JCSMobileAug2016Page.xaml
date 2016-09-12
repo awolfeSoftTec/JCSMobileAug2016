@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		xmlns:local="clr-namespace:JCSMobileAug2016" 
+		x:Class="JCSMobileAug2016.JCSMobileAug2016Page">
+	<ContentPage.Content>
+	<StackLayout VerticalOptions = "FillAndExpand">
+		<Image Source = "/Users/Mike/Documents/smaller-JCS-Badge.gif"  />
+		<StackLayout VerticalOptions = "CenterAndExpand">
+			<StackLayout Orientation = "Horizontal" HorizontalOptions = "CenterAndExpand" >
+				<Label Text = "Barcode"/>
+				<Entry Keyboard = "Text" HorizontalOptions = "FillAndExpand" WidthRequest = "200" x:Name = "userEntry"/>
+			</StackLayout>
+			<StackLayout Orientation = "Horizontal" HorizontalOptions = "CenterAndExpand">
+				<Label Text = "Password"/>
+				<Entry Keyboard = "Text" IsPassword = "true" HorizontalOptions = "FillAndExpand" WidthRequest = "200"
+						x:Name = "passEntry"/>
+			</StackLayout>
+				<Picker Title = "Facility" />
+			<Button Clicked = "logInBtnClicked" Text = "Log In" FontSize = "24"/>
+		</StackLayout>
+	</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

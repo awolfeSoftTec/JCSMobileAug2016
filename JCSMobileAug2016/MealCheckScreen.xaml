@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="JCSMobileAug2016.MealCheckScreen">
+	<ContentPage.Content>
+		<StackLayout>
+			<Label Text = "Facility A" FontSize = "30" HorizontalOptions = "Center"/>
+			<StackLayout Orientation = "Horizontal">
+				<Label Text = "Meal Type" />
+				<Picker Title = "Select Meal Type" />
+			</StackLayout>
+			<StackLayout Orientation = "Horizontal">
+				<Label Text = "Unit" />
+				<Picker x:Name = "unitPicker" Title = "Select Unit"/>
+			</StackLayout>
+			<StackLayout Orientation = "Horizontal" HorizontalOptions = "CenterAndExpand">
+				<Button Text = "Continue" Clicked = "continueBtnClicked"/>
+				<Button Text = "Cancel" Clicked = "cancelBtnClicked"/>
+			</StackLayout>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

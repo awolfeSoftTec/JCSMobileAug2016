@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="JCSMobileAug2016.MainPage">
+	<ContentPage.Content>
+		<StackLayout VerticalOptions = "CenterAndExpand">
+			<Button Clicked = "roomCheckBtnClicked" Text = "Room Checks"/>
+			<Button Clicked = "mealCheckBtnClicked" Text = "Meal Checks"/>
+			<Button Clicked = "medicineActivityBtnClicked" Text = "Medicine Activity"/>
+			<Button Text = "Synchronize"/>
+			<Button Clicked = "logOutBtnClicked" Text = "Log Out"/>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

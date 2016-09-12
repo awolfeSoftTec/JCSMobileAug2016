@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="JCSMobileAug2016.MedicineActivityScreen">
+	<ContentPage.Content>
+		<StackLayout HorizontalOptions = "Center">
+			
+			<StackLayout Orientation = "Horizontal">
+				<StackLayout Orientation = "Vertical">
+					<Label Text = "Full Name"/>
+					<StackLayout Orientation = "Horizontal">
+						<Label Text = "DOB"/>
+						<Label Text = "Barcode"/>
+					</StackLayout>
+				</StackLayout>
+				<StackLayout Orientation = "Vertical" >
+					<Image BackgroundColor = "Silver" />
+					<Button Text = "Full Size" Clicked = "fullSizeImage"/>
+				</StackLayout>
+			</StackLayout>
+			
+			<StackLayout Orientation = "Horizontal">
+				<Label Text = "Medications: "/>
+				<Picker Title = "Medication"/>
+			</StackLayout>
+			
+			<StackLayout Orientation = "Horizontal">
+				<Label Text = "Dosage Given: "/>
+				<Entry Placeholder = "Enter Quantity"/>
+				<Picker Title = "Capsule"/>
+			</StackLayout>
+
+			<StackLayout>
+				<Label Text = "Directions: "/>
+				<Editor BackgroundColor = "Silver" HeightRequest = "100" WidthRequest = "100"/>
+			</StackLayout>
+
+			<StackLayout Orientation = "Horizontal">
+				<Switch x:Name = "notGivenSwitch"/>
+				<Label Text = "Not Given"/>
+			</StackLayout>
+
+			<StackLayout>
+				<Label Text = "Barcode: "/>
+				<Entry Placeholder = "Enter Barcode"/>
+				<Button Text = "Scan" Clicked = "launchScanner"/>
+			</StackLayout>
+			
+			<StackLayout Orientation = "Horizontal" HorizontalOptions = "CenterAndExpand">
+				<Button Text = "Save" Clicked = "attemptToSave"/>
+				<Button Text = "Back" Clicked = "backBtnClicked"/>
+			</StackLayout>
+			
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

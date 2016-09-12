@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="JCSMobileAug2016.RoomCheckScreen">
+	<ContentPage.Content>
+		<StackLayout VerticalOptions = "CenterAndExpand">
+			<StackLayout Orientation = "Horizontal">
+				<Button Text = "Scan" Clicked = "launchScanner"/>
+				<Entry WidthRequest = "100" />
+			</StackLayout>
+			<StackLayout Orientation = "Horizontal">
+				<Label Text = "Room: "/>
+				<Entry WidthRequest = "200" Placeholder = "Enter Room"/>
+			</StackLayout>
+			<StackLayout Orientation = "Horizontal" >
+				<Label Text = "Detainee: " />
+				<Picker WidthRequest = "200" Title = "Select Detainee"/>
+			</StackLayout>
+			<StackLayout Orientation = "Horizontal">
+				<Label Text = "Observation"/>
+				<Picker Title = "Select Observation"/>
+			</StackLayout>
+			<StackLayout Orientation = "Horizontal" >
+				<Label Text = "Notes: " WidthRequest = "100"/>
+				<Editor WidthRequest = "250" HeightRequest = "200" BackgroundColor = "Silver"/>
+			</StackLayout>
+			<StackLayout Orientation = "Horizontal" HorizontalOptions = "CenterAndExpand">
+				<Button Text = "Save"/>
+				<Button Text = "Cancel"/>
+			</StackLayout>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
