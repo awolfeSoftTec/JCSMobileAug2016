@@ -1,5 +1,5 @@
 ﻿using System;
-using SQLite.Net.Attributes;
+using SQLite;
 namespace JCSMobileAug2016
 {
 	public class Unit
@@ -12,7 +12,7 @@ namespace JCSMobileAug2016
 		//list of detainees
 
 
-
+            
 
 		public Unit()
 		{
@@ -30,6 +30,8 @@ namespace JCSMobileAug2016
 			this.detaineeList = dList;
 
 		}
+
+    
 
 	}
 }

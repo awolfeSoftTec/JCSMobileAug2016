@@ -1,14 +1,30 @@
 ﻿using Xamarin.Forms;
 namespace JCSMobileAug2016
 {
-	public partial class App : Xamarin.Forms.Application
-	{
-		public App()
-		{
-			
-			MainPage = new NavigationPage(new JCSMobileAug2016Page());
-			//MainPage = new JCSMobileAug2016Page();
-		}
+    public partial class App : Xamarin.Forms.Application
+    {
+        static mobileDatabase dbUtils;
+        public App()
+        {
+
+            MainPage = new NavigationPage(new JCSMobileAug2016Page());
+        }
+
+
+        public static mobileDatabase DAUtil
+        {
+            get
+            {
+                if (dbUtils == null)
+                {
+                    dbUtils = new mobileDatabase();
+                }
+                return dbUtils;
+            }
+        }
+
+    
+    
 
 		protected override void OnStart()
 		{
