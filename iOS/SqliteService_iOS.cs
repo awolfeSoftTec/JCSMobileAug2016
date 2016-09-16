@@ -7,7 +7,7 @@ using SQLite;
 [assembly: Dependency(typeof(SqliteService_iOS))]
 namespace JCSMobileAug2016.iOS
 {
-	public class SqliteService_iOS// : ISQLite
+	public class SqliteService_iOS : ISQLite
 	{
 		
 		#region ISQLite implementation
@@ -19,6 +19,10 @@ namespace JCSMobileAug2016.iOS
             string personalFolder = System.Environment.GetFolderPath(Environment.SpecialFolder.Personal);
             string libraryFolder = Path.Combine(personalFolder, "..", "Library");
             var path = Path.Combine(libraryFolder, sqliteFilename);
+            if (!File.Exists(path))
+            {
+                File.Create(path);
+            }
             return new SQLiteConnection(path);
         }
 		#endregion

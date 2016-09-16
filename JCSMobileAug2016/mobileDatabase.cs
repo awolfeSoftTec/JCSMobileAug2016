@@ -16,10 +16,12 @@ namespace JCSMobileAug2016
 		//	public static SQLiteConnection _connection;
 			_connection = DependencyService.Get<ISQLite>().GetConnection();
 			_connection.CreateTable<Unit>();
-			//_connection.CreateTable<Detainee>();
-			
+			_connection.CreateTable<Detainee>();
 
-    */
+            Detainee newFish = new Detainee("Russell Brand", 1, "Big Unit");
+            _connection.Insert(newFish);
+
+   
         }
 
 
@@ -51,6 +53,7 @@ namespace JCSMobileAug2016
 
 		}
 
+        
 		public interface ISQLite
 		{
 
