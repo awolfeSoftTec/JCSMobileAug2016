@@ -1,11 +1,16 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="JCSMobileAug2016.MealScanScreen">
 	<ContentPage.Content>
 		<StackLayout VerticalOptions = "FillAndExpand">
-			<Label Text = "Ready To Scan" HorizontalTextAlignment = "Center"/>
-			<ListView>
+			<Label Text = "Ready To Scan for " HorizontalTextAlignment = "Center" x:Name = "readyLabel"/>
+			<ListView x:Name = "listview">
+				
 			</ListView>
-			<Button Text = "Scan" Clicked = "launchScanner"/>
+			<StackLayout Orientation = "Horizontal" HorizontalOptions = "CenterAndExpand" VerticalOptions = "Center">
+				<Label Text = "Barcode: "/>
+				<Entry x:Name = "barcodeFromMealScan" WidthRequest = "100"/>
+				<Button Text = "Scan" Clicked = "launchScanner"/>
+			</StackLayout>
 			<StackLayout Orientation = "Horizontal" HorizontalOptions = "CenterAndExpand">
 				<Button Text = "Save"/>
 				<Button Text = "Cancel"/>

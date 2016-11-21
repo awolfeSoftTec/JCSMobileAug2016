@@ -1,25 +1,25 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="JCSMobileAug2016.MedicineActivityScreen">
 	<ContentPage.Content>
 		<StackLayout HorizontalOptions = "Center">
 			
 			<StackLayout Orientation = "Horizontal">
 				<StackLayout Orientation = "Vertical">
-					<Label Text = "Full Name"/>
+					<Label Text = "Full Name" x:Name = "lblName"/>
 					<StackLayout Orientation = "Horizontal">
-						<Label Text = "DOB"/>
-						<Label Text = "Barcode"/>
+						<Label Text = "DOB" x:Name = "lblDOB"/>
+						<Label Text = "Barcode" x:Name = "lblBarcode"/>
 					</StackLayout>
 				</StackLayout>
 				<StackLayout Orientation = "Vertical" >
 					<Image BackgroundColor = "Silver" />
-					<Button Text = "Full Size" Clicked = "fullSizeImage"/>
+					<Button Text = "Full Size Photo" Clicked = "fullSizeImage"/>
 				</StackLayout>
 			</StackLayout>
 			
 			<StackLayout Orientation = "Horizontal">
 				<Label Text = "Medications: "/>
-				<Picker Title = "Medication"/>
+				<Picker Title = "Medication" x:Name = "medicationPicker" SelectedIndexChanged = "assignDirections"/>
 			</StackLayout>
 			
 			<StackLayout Orientation = "Horizontal">
@@ -30,7 +30,7 @@
 
 			<StackLayout>
 				<Label Text = "Directions: "/>
-				<Editor BackgroundColor = "Silver" HeightRequest = "100" WidthRequest = "100"/>
+				<Editor BackgroundColor = "Silver" HeightRequest = "100" WidthRequest = "100" x:Name = "directionsEditor"/>
 			</StackLayout>
 
 			<StackLayout Orientation = "Horizontal">
@@ -41,7 +41,7 @@
 			<StackLayout>
 				<Label Text = "Barcode: "/>
 				<Entry Placeholder = "Enter Barcode"/>
-				<Button Text = "Scan" Clicked = "launchScanner"/>
+				<Button Text = "Scan" Clicked = "loadJuvenileInformation"/>
 			</StackLayout>
 			
 			<StackLayout Orientation = "Horizontal" HorizontalOptions = "CenterAndExpand">

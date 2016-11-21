@@ -1,11 +1,11 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="JCSMobileAug2016.MedicineRefusedPage">
 	<ContentPage.Content>
 		<StackLayout VerticalOptions = "Fill" HorizontalOptions = "Center">
 			<Label Text = "Reasons Medicine Was Refused" HorizontalTextAlignment = "Center"/>
 			<StackLayout Orientation = "Horizontal">
 				<Label Text = "Reason 1 "/>
-				<Picker Title = "Select Reason"/>
+				<Picker Title = "Select Reason" x:Name = "reason1Picker"/>
 			</StackLayout>
 			<StackLayout Orientation = "Horizontal">
 				<Label Text = "Dosage Refused"/>
@@ -19,7 +19,7 @@
 			</StackLayout>
 			<StackLayout Orientation ="Horizontal">
 				<Label Text = "Reason 2 "/>
-				<Picker Title = "Select Reason"/>
+				<Picker Title = "Select Reason" x:Name = "reason2Picker"/>
 			</StackLayout>
 			<StackLayout Orientation = "Horizontal">
 				<Label Text = "Dosage Refused"/>
