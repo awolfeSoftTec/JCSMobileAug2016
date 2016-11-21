@@ -1,3 +1,4 @@
+
 ﻿using System;
 using SQLite;
 using Xamarin.Forms;
@@ -17,9 +18,9 @@ namespace JCSMobileAug2016
 			_connection = DependencyService.Get<ISQLite>().GetConnection();
 			_connection.CreateTable<Unit>();
 			//_connection.CreateTable<Detainee>();
-			
-
-    */
+			Detainee newKid = new Detainee("Harry Styles", 1, "Main Unit");
+			_connection.Insert(newKid);
+    
         }
 
 
@@ -51,6 +52,13 @@ namespace JCSMobileAug2016
 
 		}
 
+		public IEnumerable<string> getDetaineeNames()
+		{
+
+			return (from t in _connection.Table<Detainee>() select t.detaineeName).ToList();
+
+		}
+
 		public interface ISQLite
 		{
 
@@ -60,4 +68,3 @@ namespace JCSMobileAug2016
 		}
 	}
 }
-

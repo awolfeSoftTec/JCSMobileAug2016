@@ -3,6 +3,7 @@ using Xamarin.Forms;
 using ZXing;
 namespace JCSMobileAug2016
 {
+
 	public partial class MealScanScreen : ContentPage
 	{
 
@@ -11,6 +12,12 @@ namespace JCSMobileAug2016
 		public MealScanScreen()
 		{
 			InitializeComponent();
+			readyLabel.Text = "Ready to Scan\nfor " + MealCheckScreen.selectedItem;
+			listview.ItemsSource = new string[]{
+				"4060 JASON, TAJH",
+				"4065 MANN, TRAVON"
+
+			};
 		}
 
 		async void launchScanner(object s, EventArgs args)

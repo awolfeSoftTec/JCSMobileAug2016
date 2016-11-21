@@ -2,14 +2,22 @@
 using System.Collections.Generic;
 using ZXing;
 using Xamarin.Forms;
+using System.Net.Http;
+using System.Diagnostics;
+using Newtonsoft.Json;
 
 namespace JCSMobileAug2016
 {
 	public partial class MedicineActivityScreen : ContentPage
 	{
+		//list of variables to be used on this page
+		//public List<MedicationType> listOfMedications { get; set; }
+
+
 		public MedicineActivityScreen()
 		{
 			InitializeComponent();
+			loadMedicationTypes();
 		}
 
 		//launches the scanner
@@ -20,6 +28,24 @@ namespace JCSMobileAug2016
 			//var scanner = new MobileBarcodeScanner();
 			//var result = scanner.Scan();
 
+		}
+
+		public void assignDirections(object s, EventArgs args)
+		{
+
+
+			directionsEditor.Text = App.listOfMedications[medicationPicker.SelectedIndex].Instructions;
+
+
+		}
+
+
+		public void loadMedicationTypes()
+		{
+				for (int i = 0; i < App.listOfMedications.Count; i++)
+				{
+					medicationPicker.Items.Add(App.listOfMedications[i].Medication);
+				}
 		}
 
 
@@ -33,6 +59,15 @@ namespace JCSMobileAug2016
 		async void backBtnClicked(object s, EventArgs args)
 		{
 			await Navigation.PopAsync();
+		}
+
+
+		public void loadJuvenileInformation(object s, EventArgs args)
+		{
+			lblName.Text = "Frederick Flintstone";
+			lblDOB.Text = "DOB: 7/1/1960";
+			lblBarcode.Text = "4034";
+
 		}
 
 
