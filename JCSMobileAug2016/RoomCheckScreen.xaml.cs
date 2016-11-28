@@ -109,7 +109,16 @@ namespace JCSMobileAug2016
 
 		}//end handleDetaineePicker
 
+        void bogusPicker(object s, EventArgs args)
+        {
 
+            detaineePicker.Items.Clear();
+            detaineePicker.Items.Add("MICHAEL SCOFIELD");
+            detaineePicker.Items.Add("NEAL CAFFREY");
+
+
+
+        }
 
 		//GETs the list of detainees from the DB and populates our local list
 		//DOES NOT populate a picker..--we need a method to load detaineePicker once the room has

@@ -5,7 +5,7 @@
 		x:Class="JCSMobileAug2016.JCSMobileAug2016Page">
 	<ContentPage.Content>
 	<StackLayout VerticalOptions = "FillAndExpand">
-	<Image x:Name = "logoImage" Source = "/Users/Mike/Projects/JCSMobileAug2016/JCSMobileAug2016/images/jcdBadge.gif"/>
+	<Image x:Name = "logoImage" Source = "jcsBadge.gif"/>
 		<StackLayout VerticalOptions = "CenterAndExpand">
 			<StackLayout Orientation = "Horizontal" HorizontalOptions = "CenterAndExpand" >
 				<Label Text = "Barcode"/>
@@ -16,7 +16,6 @@
 				<Entry Keyboard = "Text" IsPassword = "true" HorizontalOptions = "FillAndExpand" WidthRequest = "200"
 						x:Name = "passEntry"/>
 			</StackLayout>
-				<Picker Title = "Facility" />
 			<Button Clicked = "logInBtnClicked" Text = "Log In" FontSize = "24"/>
 		</StackLayout>
 	</StackLayout>

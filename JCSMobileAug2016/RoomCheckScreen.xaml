@@ -8,7 +8,7 @@
 			</StackLayout>
 			<StackLayout Orientation = "Horizontal">
 				<Label Text = "Room: "/>
-				<Picker WidthRequest = "200" Title = "Select Room" x:Name = "roomPicker" SelectedIndexChanged = "handleDetaineePicker"/>
+				<Picker WidthRequest = "200" Title = "Select Room" x:Name = "roomPicker" SelectedIndexChanged = "bogusPicker"/>
 			</StackLayout>
 			<StackLayout Orientation = "Horizontal" >
 				<Label Text = "Detainee: " />
