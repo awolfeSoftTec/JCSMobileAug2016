@@ -13,11 +13,7 @@ namespace JCSMobileAug2016
 		{
 			InitializeComponent();
 			readyLabel.Text = "Ready to Scan\nfor " + MealCheckScreen.selectedItem;
-			listview.ItemsSource = new string[]{
-				"4060 CAFFREY, NEAL",
-				"4065 DAMON, MATT"
-
-			};
+			
 		}
 
 		async void launchScanner(object s, EventArgs args)
