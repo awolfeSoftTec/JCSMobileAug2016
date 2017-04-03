@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JCSMobileAug2016", "JCSMobileAug2016\JCSMobileAug2016.csproj", "{4D969A37-EE08-4C2A-BC7C-04DBBDB41E51}"
 EndProject
@@ -9,6 +9,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JCSMobileAug2016.Droid", "Droid\JCSMobileAug2016.Droid.csproj", "{9B9438FF-4E23-48D1-AF91-57E4BBD844BD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JCSMobileAug2016.UWP", "JCSMobileAug2016.UWP\JCSMobileAug2016.UWP.csproj", "{4C02700B-2479-49CB-806F-956534D56A28}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{7CDD5C78-D7B3-460B-9C51-00452EF53FA7}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
