@@ -17,12 +17,12 @@ namespace JCSMobileAug2016
 		{
 			InitializeComponent();
 			//adding the image to the main screen
-            /*
+            
 			logoImage.Source = Device.OnPlatform(
 				iOS: ImageSource.FromFile("jcsBadge.gif"),
 				Android: ImageSource.FromFile("jcsBadge.gif"),
-				WinPhone: ImageSource.FromFile("iamges/jcsBadge.gif"));
-                */
+				WinPhone: ImageSource.FromFile("images/jcsBadge.gif"));
+                
 		}
 
 			//call when the crentials check out
